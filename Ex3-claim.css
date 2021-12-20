@@ -1,0 +1,25 @@
+.wrapper{
+   
+    height: 516px;
+    display: flex;
+    background-color:grey;
+    margin:0px;
+    width: clamp(300px ,100% ,800px);
+    flex-direction: row;
+
+   
+   
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px 60px;
+    background-color:yellow;
+    width:100%;
+    
+    
+    
+   
+    
+}

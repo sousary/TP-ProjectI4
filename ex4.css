@@ -1,0 +1,28 @@
+.wrapper{
+   display:flex;
+    width: 600px;
+    height:500px;
+    background-color:rgb(196, 196, 181);
+    margin: 0;
+   
+   
+   
+    
+
+}
+.drop{
+    
+   
+   
+   transition: transform 2s ;
+   height: 250px;
+   padding-left:10px;
+   margin-left: 120px;
+   
+   
+    
+}
+.wrapper:hover .drop{
+    
+    transform: translateY(100%);
+}
