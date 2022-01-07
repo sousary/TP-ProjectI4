@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Projection!</title>
+    <style>
+        #header {
+            position: relative;
+            width:610px;
+            background-color: rgb(141, 151, 151);
+            border: 1px solidrgb(141, 151, 151);
+            margin-left: 100px;
+            
+            
+           
+        }
+        #canvas {
+            padding-left: 5px;
+            padding-top: 3px;
+        }
+        #but{
+            position: relative;
+            border: 3px solid rgb(141, 151, 151);
+            text-align: center;
+            background-color: rgb(141, 151, 151);
+            color: white;
+            margin-left: 100px;
+            
+            width: 605.5px;
+           
+
+        }
+        #multi {
+            width: 620px;
+           
+            margin-top:10px;
+            margin-left: 100px;
+            
+            margin-right:22px;
+            margin-bottom:20px;
+            
+        }
+        #small-canvas{
+            border: 1px solid black;
+        }
+        #next1{
+            border: 1px solid black;
+        }
+        #next2{
+            border: 1px solid black;
+        }
+        #next3{
+            border: 1px solid black;
+        }
+        #next4{
+            border: 1px solid black;
+        }
+        #next5{
+            border: 1px solid black;
+        }
+        #next6{
+            border: 1px solid black;
+        }
+        #next7{
+            border: 1px solid black;
+        }
+        #next8{
+            border: 1px solid black;
+        }
+       
+       
+
+    </style>
+</head>
+<body>
+    
+    
+    <div id="header">
+         
+          <canvas id="canvas" width="600" height="600"></canvas>
+          
+         
+    </div>
+    <div id="but">  
+        Canvas 👻: Please show your face! <br>
+        <button onclick="myFunction()">Play</button>
+    </div>
+    
+    
+    <div id="multi">
+        <canvas id="small-canvas" ></canvas>
+        <canvas id="next1" ></canvas>
+        <canvas id="next2" ></canvas>
+        <canvas id="next3" ></canvas>
+        <canvas id="next4" ></canvas>
+        <canvas id="next5" ></canvas>
+        <canvas id="next6" ></canvas>
+        <canvas id="next7" ></canvas>
+        <canvas id="next8" ></canvas>
+
+    </div>
+    
+    <script type="text/javascript" src="https://docs.opencv.org/3.4.0/opencv.js"></script>
+    <script>
+        var canvas = document.getElementById('canvas'),
+        context = canvas.getContext('2d'),
+        video = document.createElement('video');
+        video.autoplay=true;
+       
+       
+    
+    function myFunction(){
+
+        navigator.mediaDevices.getUserMedia({
+            audio: false,
+            video: true
+        }).then((stream)=> {
+            video.srcObject = stream;
+        })
+        
+        console.log('called');
+        (function loop(){
+           
+                canvas.getContext('2d').drawImage(video,0,0,canvas.clientWidth,canvas.height);
+
+                let src = cv.imread('canvas');
+                let dst = new cv.Mat();
+               
+                let rect1=new cv.Rect(0,0,199,200);
+                dst =src.roi(rect1);
+                cv.imshow('small-canvas',dst);
+
+                let rect2=new cv.Rect(200,0,199,200);
+                dst =src.roi(rect2);
+                cv.imshow('next1',dst);
+
+                let rect3=new cv.Rect(400,0,199,200);
+                dst =src.roi(rect3);
+                cv.imshow('next2',dst);
+
+                let rect4=new cv.Rect(0,200,199,200);
+                dst =src.roi(rect4);
+                cv.imshow('next3',dst);
+
+                let rect5=new cv.Rect(200,200,199,200);
+                dst =src.roi(rect5);
+                cv.imshow('next4',dst);
+
+                let rect6=new cv.Rect(400,200,199,200);
+                dst =src.roi(rect6);
+                cv.imshow('next5',dst);
+
+                let rect7=new cv.Rect(0,400,199,200);
+                dst =src.roi(rect7);
+                cv.imshow('next6',dst);
+
+                let rect8=new cv.Rect(200,400,199,200);
+                dst =src.roi(rect8);
+                cv.imshow('next7',dst);
+
+                let rect9=new cv.Rect(400,400,199,200);
+                dst =src.roi(rect9);
+                cv.imshow('next8',dst);
+               
+               
+             
+
+                setTimeout(loop,1000/30);
+        })();
+            
+        
+       
+
+    }
+
+
+    </script>
+</body>
+</html>

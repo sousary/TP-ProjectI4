@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Upload image</title>
+   <style>
+    .wrapper >canvas{
+        background-color: white;
+        border: 1px solid black
+    }
+    .wrapper{
+        margin-top: 50%;
+        left:50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background-color: gray;
+        border-top: 5px solid gray;
+        border-bottom: 5px solid gray;
+        width: 600px;
+        color:white;
+    }
+   </style>
+</head>
+<body>
+<div class="wrapper">
+    
+    <canvas id="imageCanvas" width="592" height="592"></canvas>
+    <br>
+    <span>Canvas: uploaded an image please!!!</span>
+    <br>
+    <input type="file" id="uploaded" name="uploaded" />
+</div>
+
+<script src="Ex1_drawImage.js" type="text/javascript">
+</script>
+</body>
+</html>
