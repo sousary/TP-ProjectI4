@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #aaa;
+        }
+        
+        .container {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .wrap {
+            width: 450px;
+            height: auto;
+            border: 2px solid black;
+            text-align: center;
+            background-color: #fafafa;
+        }
+        
+        .wrap .wrapper {
+            font-size: xx-large;
+            font-weight: 600;
+            color: rgba(13, 163, 213, 0.9);
+            margin: 200px 0 20px 0;
+        }
+        
+        .wrap .result {
+            font-size: 60px;
+            font-weight: 600;
+            color: rgba(106, 130, 220, 0.7);
+            font-family: 'Lobster', cursive;
+        }
+        
+        .wrap>button {
+            /* margin-top: 20px; */
+            cursor: pointer;
+            background-color: rgba(61, 133, 198, .7);
+            color: white;
+            border-style: outset;
+            border-color: #0066A2;
+            width: 5rem;
+            font: sans-serif;
+            text-shadow: none;
+            height: 2rem;
+            border-radius: 0.165rem;
+            margin: 30px 3px 250px 3px;
+        }
+        
+        #decreaseBtn {
+            background-color: rgba(247, 8, 8, 0.7);
+        }
+        
+        #resetBtn {
+            background-color: rgba(11, 11, 245, 0.1);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap">
+            <div class="wrapper">Counter</div>
+            <div class="result">0</div>
+            <button type="submit" id="decreaseBtn">Decrease</button>
+            <button type="submit" id="resetBtn">Reset</button>
+            <button type="submit" id="increaseBtn">Increase</button>
+        </div>
+    </div>
+    <script src="counter.js"></script>
+</body>
+</html>

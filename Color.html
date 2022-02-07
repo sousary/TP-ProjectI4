@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #aaa;
+        }
+        
+        .container {
+            width: 96vw;
+            height: 33vh;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .color {
+            text-align: center;
+            width: 30rem;
+            font-size: large;
+            font-weight: 700;
+        }
+        
+        .color .head {
+            background-color: rgb(22, 22, 22);
+            height: 100px;
+        }
+        
+        .head>h2 {
+            color: aliceblue;
+            padding-top: 10px;
+        }
+        
+        .head .result {
+            color: aliceblue;
+        }
+        
+        .color .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 65px;
+            box-shadow: rgba(4, 28, 56, 0.3) 0px 0px 0px 0px;
+            background-color: #fafafa;
+        }
+        
+        .button>button {
+            margin: 10px;
+        }
+        
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            justify-content: end;
+            background-color: #fafafa;
+        }
+        
+        .items .items-color {
+            width: 100%;
+            display: flex;
+            margin: 0 0 0 10px;
+        }
+        
+        #generateBtn,
+        #resetBtn {
+            cursor: pointer;
+            background-color: rgba(17, 141, 32, .7);
+            color: white;
+            border-style: outset;
+            border-color: #0066A2;
+            width: 8rem;
+            font: sans-serif;
+            text-shadow: none;
+            height: 2rem;
+            margin-top: 0.645rem;
+            border-radius: 0.165rem;
+            margin: 0.50rem 10px 0.670rem 10px;
+        }
+        
+        #resetBtn {
+            background-color: rgba(239, 54, 54, .7);
+        }
+        
+        .items-color .box {
+            height: 10px;
+            width: 10px;
+            margin-top: 3px;
+            border: 1px solid black;
+        }
+        
+        .buttom {
+            height: 10vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="color">
+            <div class="head">
+                <h2>Background Color:</h2>
+                <h3 class="result"></h3>
+            </div>
+
+            <div class="button">
+                <button type="submit" id="generateBtn">GENERATE</button>
+                <button type="submit" id="resetBtn">RESET</button>
+            </div>
+
+            <div class="items"></div>
+            <div class="buttom"></div>
+        </div>
+    </div>
+     <script src="color.js"></script>
+</body>
+</html>
